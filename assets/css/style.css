@@ -194,6 +194,12 @@ header {
     margin-bottom: 20px;
 }
 
+/* Poore page par horizontal scrolling ko rokta hai */
+
+html, body {
+    overflow-x: hidden; 
+}
+
 /* History Section Side Image */
 #history .side-image {
     max-height: 450px; 
