@@ -193,7 +193,15 @@ header {
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
-
+/* Hero Section ke Text ko chote screen par adjust karna */
+@media (max-width: 767px) {
+    .hero-title {
+        /* Chote screen par font size kam karein */
+        font-size: 2.2rem; 
+        /* Padding de taake content kinaron se na chipke */
+        padding: 0 15px; 
+    }
+}
 /* Poore page par horizontal scrolling ko rokta hai */
 
 html, body {
