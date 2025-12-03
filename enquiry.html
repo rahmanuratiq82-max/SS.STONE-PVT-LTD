@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="Logo.avif">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get a Quote - SS Stone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+
+<body class="bg-dark-primary"> 
+
+   <header class="fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="Logo.avif" alt="SS Stone Logo" class="me-2">
+                <span class="text-light">SS <span class="text-green">STONE</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProducts" role="button" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownProducts">
+                            <li><a class="dropdown-item" href="products.html">All Products</a></li>
+                            <li><hr class="dropdown-divider border-secondary"></li>
+                            <li><a class="dropdown-item" href="products.html#marble">Marble</a></li>
+                            <li><a class="dropdown-item" href="products.html#granite">Granite</a></li>
+                            <li><a class="dropdown-item" href="products.html#onyx">Onyx</a></li>
+                            <li><a class="dropdown-item" href="products.html#travertine">Travertine</a></li>
+                            <li><a class="dropdown-item" href="products.html#limestone">Limestone</a></li>
+                            <li><hr class="dropdown-divider border-secondary"></li>
+                            <li><a class="dropdown-item" href="products.html#minerals">Minerals</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCompany" role="button" data-bs-toggle="dropdown" aria-expanded="false">Company</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownCompany">
+                            <li><a class="dropdown-item" href="mining-project.html">Mining Projects</a></li>
+                            <li><a class="dropdown-item" href="certifications.html">Certifications</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-green btn-sm d-block d-lg-inline-block active" aria-current="page" href="enquiry.html">Get a Quote</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+    <main>
+        
+        <section class="hero-section text-center py-5" style="background-image: url('enquiry\ hero\ sec.png'); min-height: 450px;">
+            <div class="container" style="padding-top: 150px;">
+                <h1 class="hero-title fw-bold text-uppercase animate__animated animate__fadeInDown">REQUEST A <span class="text-green">CUSTOM QUOTE</span></h1>
+                <p class="lead text-light opacity-75 animate__animated animate__fadeInUp">Tell us about your project needs for accurate pricing and swift delivery.</p>
+            </div>
+        </section>
+        
+        <section class="py-5 bg-dark-secondary">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="p-4 p-md-5 rounded shadow-lg bg-dark-primary">
+                            <div class="text-center mb-5">
+                                <p class="text-green fw-bold mb-1">PROJECT DETAILS</p>
+                                <h2 class="display-6 fw-bold">Share Your Requirements</h2>
+                            </div>
+
+                          <form action="submit_quotation.php" method="POST" id="quotationForm" class="needs-validation" novalidate>
+                                
+    <h4 class="text-light border-bottom border-secondary pb-2 mb-4"><i class="fas fa-user-circle me-2 text-green"></i> Your Contact Information</h4>
+    <div class="row g-3 mb-4">
+        <div class="col-md-6">
+          <label for="fullName" class="form-label text-muted">Full Name</label>
+          <input 
+             type="text" 
+             class="form-control bg-dark-secondary text-light border-secondary" 
+             id="fullName" 
+             **name="fullName"**
+             required 
+             pattern="[A-Za-z\s.'-]+" 
+             title="Name should only contain letters, spaces, hyphens, and apostrophes."
+            >
+         <div class="invalid-feedback">Please enter a valid name (only letters and spaces allowed).</div>
+    </div>
+        <div class="col-md-6">
+            <label for="emailAddress" class="form-label text-muted">Email Address</label>
+            <input type="email" class="form-control bg-dark-secondary text-light border-secondary" id="emailAddress" **name="email"** required>
+            <div class="invalid-feedback">Please provide a valid email address.</div>
+        </div>
+        <div class="col-md-6">
+            <label for="phoneNumber" class="form-label text-muted">Phone Number</label>
+            <input type="tel" class="form-control bg-dark-secondary text-light border-secondary" id="phoneNumber" **name="phone"**>
+        </div>
+        <div class="col-md-6">
+            <label for="companyName" class="form-label text-muted">Company Name (Optional)</label>
+            <input type="text" class="form-control bg-dark-secondary text-light border-secondary" id="companyName" **name="company"**>
+        </div>
+    </div>
+
+    <h4 class="text-light border-bottom border-secondary pb-2 mb-4 mt-5"><i class="fas fa-cube me-2 text-green"></i> Product Details</h4>
+    <div class="row g-3 mb-4">
+        <div class="col-md-6">
+            <label for="materialType" class="form-label text-muted">Material Preference</label>
+            <select class="form-select bg-dark-secondary text-light border-secondary" id="materialType" **name="materialType"** required>
+                <option value="" disabled selected>Choose Material...</option>
+                <option value="Marble">Marble</option>
+                <option value="Granite">Granite</option>
+                <option value="Onyx">Onyx</option>
+                <option value="Travertine">Travertine</option>
+                <option value="Limestone">Limestone</option>
+                <option value="Minerals">Raw Minerals</option>
+                <option value="Other">Other Stone / Unsure</option>
+            </select>
+            <div class="invalid-feedback">Please select a material type.</div>
+        </div>
+        <div class="col-md-6">
+            <label for="projectType" class="form-label text-muted">Intended Use / Project Type</label>
+            <input type="text" class="form-control bg-dark-secondary text-light border-secondary" id="projectType" **name="projectType"** placeholder="e.g., Kitchen Countertop, Flooring, Export Batch" required>
+            <div class="invalid-feedback">Please describe the intended use.</div>
+        </div>
+        <div class="col-md-4">
+            <label for="quantity" class="form-label text-muted">Approx. Quantity Needed</label>
+            <input type="number" class="form-control bg-dark-secondary text-light border-secondary" id="quantity" **name="quantity"** placeholder="e.g., 500" required>
+            <div class="invalid-feedback">Please specify the quantity.</div>
+        </div>
+        <div class="col-md-4">
+            <label for="unit" class="form-label text-muted">Unit of Measurement</label>
+            <select class="form-select bg-dark-secondary text-light border-secondary" id="unit" **name="unit"** required>
+                <option value="sqft">Square Feet (sqft)</option>
+                <option value="sqmeter">Square Meters (m²)</option>
+                <option value="ton">Tons (Metric)</option>
+                <option value="blocks">Number of Blocks</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <label for="timeFrame" class="form-label text-muted">Required Time Frame</label>
+            <input type="text" class="form-control bg-dark-secondary text-light border-secondary" id="timeFrame" **name="timeFrame"** placeholder="e.g., 4-6 Weeks" required>
+            <div class="invalid-feedback">Please specify the required time frame.</div>
+        </div>
+    </div>
+    
+    <h4 class="text-light border-bottom border-secondary pb-2 mb-4 mt-5"><i class="fas fa-comment-alt me-2 text-green"></i> Additional Notes</h4>
+    <div class="col-12 mb-4">
+        <label for="details" class="form-label text-muted">Specific Details / Message</label>
+        <textarea class="form-control bg-dark-secondary text-light border-secondary" id="details" **name="details"** rows="5" placeholder="Mention specific colors, finishes (polished, honed), dimensions, or any other requirements here."></textarea>
+    </div>
+    
+    <div class="col-12 mt-4 text-center">
+        <button class="btn btn-green btn-lg w-75" type="submit">Submit Quote Request <i class="fas fa-arrow-alt-circle-right ms-2"></i></button>
+    </div>
+    
+                          </form>
+                          <div id="responseMessage" class="mt-3">
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+      <footer class="footer pt-5 pb-4 bg-dark-secondary">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h5 class="text-uppercase fw-bold mb-4">SS <span class="text-green">STONE</span></h5>
+                <p class="text-muted">A legacy of quality in natural stone. Dedicated to sustainable mining and premium processing for global markets.</p>
+            </div>
+            <div class="col-lg-2 col-md-6 mb-4">
+                <h6 class="text-uppercase fw-bold mb-4">Quick Links</h6>
+                <ul class="list-unstyled">
+                    <li><a href="products.html">Our Products</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="mining-project.html">Mining Projects</a></li>
+                    <li><a href="certifications.html">Certifications</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                <p class="text-muted"><i class="fas fa-home me-3 text-green"></i>  Shafeeq plaza suite # A-3, 2nd, Block-A Sarwar Shaheen Rd, Karachi 74400</p>
+                <p class="text-muted"><i class="fas fa-envelope me-3 text-green"></i> info@ssstone.pk</p>
+                <p class="text-muted"><i class="fas fa-phone me-3 text-green"></i> (021)35682754</p>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h6 class="text-uppercase fw-bold mb-4">Follow Us</h6>
+                <div class="d-flex">
+                    <a href="https://www.facebook.com/SSstone.pk" class="btn-floating btn-sm text-white me-3" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/SS_Stone01" class="btn-floating btn-sm text-white me-3" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="http://www.linkedin.com/in/ ss--957179383" class="btn-floating btn-sm text-white me-3" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/ss_stone_pvt?igsh=Z24ybWxlcmx3NXAz" class="btn-floating btn-sm text-white" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr class="my-3 border-secondary">
+        <div class="text-center">
+            <p class="text-muted m-0">© 2022 by S.S.Stone. | <a href="privacy-policy.html" class="text-green fw-bold">Privacy Policy</a></p>
+        </div>
+    </div>
+</footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    
+    <script>
+        (function () {
+            'use strict'
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    
+    $(document).ready(function() {
+        $('#quotationForm').on('submit', function(e) {
+            
+            e.preventDefault(); 
+            
+            if (!this.checkValidity()) {
+                this.classList.add('was-validated');
+                return; 
+            }
+
+            var $submitButton = $(this).find('button[type="submit"]');
+            $submitButton.prop('disabled', true).text('Submitting...');
+
+            $('#responseMessage').removeClass().html('');
+
+            $.ajax({
+                type: 'POST',
+                url: $(this).attr('action'), 
+                data: $(this).serialize(), 
+                dataType: 'json', 
+                
+                success: function(response) {
+                    $submitButton.prop('disabled', false).text('Get A Quote');
+                    
+                    var messageClass = response.success ? 'alert-success' : 'alert-danger';
+                    var messageHtml = '<div class="alert ' + messageClass + '">' + response.message + '</div>';
+                    
+                    $('#responseMessage').html(messageHtml);
+                    
+                    if (response.success) {
+                        $('#quotationForm')[0].reset();
+                        $('#quotationForm').removeClass('was-validated');
+                    }
+                },
+                
+                error: function(jqXHR, textStatus, errorThrown) {
+                    $submitButton.prop('disabled', false).text('Get A Quote');
+                    var messageHtml = '<div class="alert alert-danger">An unexpected error occurred. Please try again later. (' + textStatus + ')</div>';
+                    $('#responseMessage').html(messageHtml);
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+/*
+ * SS Stone Modern Styles - FINAL CONSOLIDATED REVISION
+ * Theme: Dark Mode (Charcoal/Black), Minimalist, EMERALD GREEN/STONE ACCENT
+ * Fonts: Playfair Display (Headings), Montserrat (Body)
+ */
+
+/* -------------------- 1. Custom Variables & Base Styles -------------------- */
+
+:root {
+    /* Color Palette */
+    --color-green: #38761d;         /* Primary Accent: Dark Forest Green (Matching Logo) */
+    --color-emerald: #55c455;       /* Lighter Emerald/Stone Green for highlights/hover (Better visibility) */
+    --color-dark-primary: #1e1e1e;   /* Main Dark Background: Near Black/Deep Charcoal */
+    --color-dark-secondary: #2c2c2c; /* Slightly lighter dark for section breaks */
+    --color-light-text: #e9ecef;     /* Off-white/Silver for main text (HIGH CONTRAST) */
+    --color-text-muted: #b3b3b3;     /* Muted text for descriptions (Readable on dark background) */
+
+    /* Typography */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-light-text);
+    line-height: 1.7;
+    background-color: var(--color-dark-primary); 
+    /* FIX: Fixed Navbar ke neeche content saaf dikhne ke liye padding */
+    padding-top: 85px; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--color-light-text);
+}
+
+section {
+    padding: 80px 0; 
+}
+
+/* Utility Classes */
+.text-muted {
+    color: var(--color-text-muted) !important; 
+}
+.text-green {
+    color: var(--color-green) !important;
+}
+.text-emerald {
+    color: var(--color-emerald) !important;
+}
+.bg-dark-primary {
+    background-color: var(--color-dark-primary) !important;
+}
+.bg-dark-secondary {
+    background-color: var(--color-dark-secondary) !important;
+}
+
+
+/* -------------------- 2. Navigation & Header (Navbar) -------------------- */
+
+header {
+    background-color: rgba(30, 30, 30, 0.95); /* Semi-transparent dark header */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    z-index: 1030;
+}
+
+/* Logo Styling */
+.navbar-brand img {
+    height: 40px; 
+    margin-right: 8px;
+}
+.navbar-brand span {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--color-light-text);
+    padding: 10px 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    border-bottom: 2px solid transparent; 
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--color-emerald); 
+    border-color: var(--color-emerald);
+}
+
+/* Dropdown Menu Customization */
+.dropdown-menu {
+    background-color: var(--color-dark-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 3px solid var(--color-emerald); /* Highlight border */
+}
+
+.dropdown-item {
+    color: var(--color-light-text);
+}
+
+.dropdown-item:hover {
+    background-color: rgba(56, 118, 29, 0.15); /* Light green overlay */
+    color: var(--color-emerald);
+}
+
+
+/* -------------------- 3. Custom Buttons & CTA -------------------- */
+
+.btn-green { 
+    background-color: var(--color-green);
+    border-color: var(--color-green);
+    color: var(--color-light-text); 
+    font-weight: 600;
+    padding: 10px 25px;
+    border-radius: 0; 
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-green:hover {
+    background-color: var(--color-emerald); 
+    border-color: var(--color-emerald);
+    color: var(--color-dark-primary); 
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(56, 118, 29, 0.3); 
+}
+
+.btn-outline-green {
+    color: var(--color-emerald);
+    border-color: var(--color-emerald);
+    font-weight: 600;
+    padding: 10px 25px;
+    border-radius: 0;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-green:hover {
+    background-color: var(--color-emerald);
+    color: var(--color-dark-primary);
+}
+
+
+/* -------------------- 4. Hero/Banner Section -------------------- */
+
+.hero-section {
+    min-height: 50vh; /* Inner pages ke liye choti height */
+    padding-top: 150px; /* Navbar Clearance ke liye */
+    padding-bottom: 80px;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.bg-overlay {
+    /* Yeh style HTML mein inline diya gaya hai, lekin yahan general definition de rahe hain */
+    background: rgba(0, 0, 0, 0.65);
+}
+
+
+/* -------------------- 5. Component Styles (Feature Box - About Page) -------------------- */
+
+.feature-box {
+    text-align: center;
+    padding: 40px 20px;
+    background: var(--color-dark-primary); /* Base color dark-primary rakha hai */
+    border: 1px solid var(--color-dark-secondary);
+    border-radius: 5px; 
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    height: 100%;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    background-color: var(--color-dark-secondary);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.feature-box i {
+    color: var(--color-emerald); 
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* History Section Side Image */
+#history .side-image {
+    max-height: 450px; 
+    object-fit: cover;
+}
+
+
+/* -------------------- 6. Footer -------------------- */
+
+.footer a {
+    color: var(--color-text-muted); 
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--color-emerald);
+}
+
+.footer .fa-brands, .footer .fa-solid {
+    font-size: 1.2rem;
+    color: var(--color-emerald);
+    transition: color 0.3s ease;
+}
+
+.footer .btn-floating:hover .fa-brands {
+    color: #fff;
+}
+.product-card img {
+  width: 100%;            /* image card ke width ke barabar */
+  height: 220px;          /* fix height (apni marzi se change kar sakte ho) */
+  object-fit: cover;      /* image ko crop karke equal size banata hai */
+  display: block;
+}
+/* --- GALLERY SPECIFIC STYLES & FIXES --- */
+
+/* Fix: Ensures all images maintain a consistent, fixed height */
+.gallery-img {
+    height: 280px; /* Card height control. Aap is value ko adjust kar sakte hain */
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Base Wrapper for positioning overlay */
+.gallery-item-wrapper {
+    position: relative;
+    cursor: pointer;
+}
+
+/* Hover Effect: Image zoom out */
+.gallery-item-wrapper:hover .gallery-img {
+    transform: scale(1.08);
+}
+
+/* Overlay Styling: Green/Dark overlay for text on hover */
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(30, 30, 30, 0.7); /* Dark semi-transparent background */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    opacity: 0; /* Default hidden */
+    transition: opacity 0.5s ease;
+}
+
+/* Hover Effect: Overlay appears */
+.gallery-item-wrapper:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-overlay h5, 
+.gallery-overlay p {
+    /* Ensure text has a clean look */
+    margin-bottom: 5px;
+}
